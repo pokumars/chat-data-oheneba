@@ -1,0 +1,12 @@
+.displayBox {
+  border:  3px solid gray;
+  border-radius: 10px;
+  min-width: 200px;
+  width: 25%;
+  margin: 10px;
+  min-height: 150px;
+  text-align: center;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+}
