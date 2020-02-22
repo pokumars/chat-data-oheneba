@@ -20,11 +20,25 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
+### `node index.js`
+
+Runs the app in the production mode mode.<br />
+Open [http://localhost:3001](http://localhost:3001) to view it in the browser.
+
+The page is served up using an express.js server
+
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.<br />
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
+### Some cool things
+saves token to local storage
+deployed to heroku
+scripts for rebuilding project and auto deploying to heroku when I make changes
+5-second Notifications in app
+serves production build through an express server
 
 #### About
-This is a take home assignment for Jr SW Devs/ summer trainees position at 
+This is a take home assignment for Jr SW Devs/summer trainees position at giosg
+React App production build served up using an express/node server from heroku
