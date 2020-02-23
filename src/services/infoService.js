@@ -1,8 +1,9 @@
 const userTokenFromLocalStorage = () =>window.localStorage.getItem("user token")
+const removeTokenFromStorage= () => window.localStorage.removeItem('user token');
 let USER_TOKEN = userTokenFromLocalStorage()
 
 const setUserToken= (token) => {
-  console.log("setUserToken ", token)
+  //console.log("setUserToken ", token)
   USER_TOKEN = token
 }
 const createUrl = (begin, end) =>{//fill in end date and start date to form url
@@ -28,4 +29,5 @@ const getData = async (begin, end) => {
 }
 
 
-export default { getData, setUserToken, userTokenFromLocalStorage };
+export default { getData, setUserToken,
+  userTokenFromLocalStorage, removeTokenFromStorage };

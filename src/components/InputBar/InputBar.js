@@ -3,7 +3,7 @@ import'./InputBar.css'
 import infoService from '../../services/infoService';
 
 export const InputBar = (props) => {
-  const { startDate, endDate, userToken, changeStartDate,
+  const { startDate, endDate, userToken, changeStartDate, removeToken,
      changeEndDate, changeUserToken, search } = props;
 
      
@@ -23,13 +23,20 @@ export const InputBar = (props) => {
           </div>
           <div className="form-group col-md-4">
             <label >Access Token <span role="img" aria-label="spy and handshake"> &#128373; &#129309;</span> </label>
-            <input type="text" value={userToken} onChange={changeUserToken}
+            <input type="password" value={userToken} onChange={changeUserToken}
             placeholder={infoService.userTokenFromLocalStorage()? "" : "type in user token"}
             className="form-control" id="inputToken"  />
           </div>
         </div>
         <button type="submit" className="btn btn-dark">Search</button>
+
+        {//render a remove token button when token is not null
+        infoService.userTokenFromLocalStorage() !== null && 
+        <button type="button" onClick={removeToken} className="btn btn-secondary ml-2">
+          Remove Token
+        </button> }
       </form>
+     
 
     </div>
   )

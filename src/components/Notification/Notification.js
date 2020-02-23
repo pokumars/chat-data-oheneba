@@ -5,7 +5,7 @@ const Notification = (props) => {
   if (msg === null){
     return null;
   }
-
+  //The notification will be red or green depending on whether it is bad or not.
   const notificationStyle = {
     color: msg.positive? '#28a745' : '#dc3545',
     background: 'lightgrey',
@@ -17,7 +17,7 @@ const Notification = (props) => {
     textAlign: "center"
   };
 
-  console.log(msg)
+  //console.log(msg)
 
   return (
     <div style={notificationStyle}>

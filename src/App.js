@@ -36,7 +36,7 @@ const App = () => {
   const paginate =(pageNumber) => setCurrentPage(pageNumber)
 
   const createNotification = (notificationMessage, positive) => {
-    //creates a notification that lasts 5 seconds
+    //creates a notification prompt that lasts 5 seconds
     setMessage({message: notificationMessage, positive: positive});
       setTimeout(() => {
         setMessage(null);
@@ -53,6 +53,13 @@ const App = () => {
     {valueName:"Total User Messages", value: data? data.total_user_message_count: "-"},
     {valueName:"Total Visitor Messages", value: data? data.total_visitor_message_count: "-"}
   ]
+
+  const removeToken= () => {
+    infoService.removeTokenFromStorage()
+    window.location.reload();
+
+    createNotification("User token has been removed", true)
+  }
 
   //method to get values from local storage to avoid repeated code
   const startDateFromLocalStorage = () =>window.localStorage.getItem("start date")
@@ -96,7 +103,8 @@ const App = () => {
     <div className="container">
       <InputBar startDate={startDate} endDate={endDate} userToken={userToken}
         changeStartDate={handleStartDateChange} changeEndDate={handleEndDateChange} 
-        changeUserToken={handleUserTokenChange} search={searchForData}/>
+        changeUserToken={handleUserTokenChange} search={searchForData}
+        removeToken={removeToken}/>
 
       <Notification msg={message}/>
       <DisplayBoxes valuesArr={valuesArr}/>

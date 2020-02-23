@@ -1,5 +1,7 @@
 ## Description
-This project was built with React. I made a production version of it which I then serve with express. It is deployed to Heroku.
+This project was built with React. I made a production version of it which I then serve with express. It is deployed and running in [Heroku](https://chat-data-oheneba.herokuapp.com/).
+
+**I am on the free-tier so it may take a moment to load if it hasn't been visited in a while**
 
 It serves some information from giosg's API in a given time-frame about messaging statistics
 
@@ -33,11 +35,11 @@ Launches the test runner in the interactive watch mode.<br />
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### Some cool things
-saves token to local storage
-deployed to heroku
-scripts for rebuilding project and auto deploying to heroku when I make changes
-5-second Notifications in app
-serves production build through an express server
+* saves token and last search parameters to local storage
+* deployed to [heroku](https://chat-data-oheneba.herokuapp.com/)
+* scripts for rebuilding project and auto deploying to heroku when I make changes
+* 5-second Notifications in app
+* serves production build through an express server
 
 #### About
 This is a take home assignment for Jr SW Devs/summer trainees position at giosg
