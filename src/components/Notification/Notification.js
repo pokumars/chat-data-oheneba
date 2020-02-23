@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const Notification = (props) => {
   const { msg } = props;
@@ -7,10 +7,10 @@ const Notification = (props) => {
   }
   //The notification will be red or green depending on whether it is bad or not.
   const notificationStyle = {
-    color: msg.positive? '#28a745' : '#dc3545',
-    background: 'lightgrey',
+    color: msg.positive? "#28a745" : "#dc3545",
+    background: "lightgrey",
     fontSize: 20,
-    borderStyle: 'solid',
+    borderStyle: "solid",
     borderRadius: 10,
     padding: 7,
     margin: 7,

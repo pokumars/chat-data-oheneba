@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 export const Pagination = (props) => {
   const { totalDays, daysPerPage, paginate, currentPage } = props;
@@ -20,9 +20,9 @@ export const Pagination = (props) => {
             <a className="page-link" href="#!" onClick={() => paginate(number)}>
               {number}
             </a>
-          </li>
+          </li>;
         })}
       </ul>
     </nav>
-  )
-}
+  );
+};
